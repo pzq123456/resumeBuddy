@@ -1,0 +1,27 @@
+#!/bin/sh
+# Refuse to commit personal data under data/.
+#
+# Small guard against an explicit `git add -f`; .gitignore does the normal
+# work. This is not a security boundary: `git commit --no-verify` bypasses it.
+# It never deletes or rewrites files.
+
+set -eu
+
+staged=$(git diff --cached --name-only --diff-filter=ACDMR)
+[ -n "$staged" ] || exit 0
+
+bad=$(printf '%s\n' "$staged" | grep '^data/' || true)
+[ -n "$bad" ] || exit 0
+
+{
+    echo "ERROR: refusing to commit personal data under data/:"
+    printf '%s\n' "$bad" | sed 's/^/  /'
+    echo
+    echo "data/ is gitignored by default; this caught an explicit stage."
+    echo "Unstage without deleting anything:"
+    echo "  git restore --staged <path>"
+    echo
+    echo "Not a security boundary: git commit --no-verify bypasses this hook."
+} >&2
+
+exit 1

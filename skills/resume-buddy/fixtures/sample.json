@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "accent": "#58758A",
+    "fixture": "synthetic-demo",
+    "note": "Fully fictional demo data. Names, employers, schools, links and numbers are invented for tests and documentation. Contains no real personal information."
+  },
+  "basics": {
+    "name": { "en": "Alex Rivera", "zh": "亚历克斯·里维拉" },
+    "label": { "en": "Senior Software Engineer", "zh": "高级软件工程师" },
+    "location": { "en": "Singapore", "zh": "新加坡" },
+    "email": "alex.rivera@example.com",
+    "phone": "+65 5000 1234",
+    "url": "https://alex.example.com",
+    "profiles": [
+      { "network": "GitHub", "url": "https://github.com/example" }
+    ]
+  },
+  "skills": [
+    {
+      "name": { "en": "Languages", "zh": "编程语言" },
+      "keywords": ["Python", "TypeScript", "Go", "SQL"]
+    },
+    {
+      "name": { "en": "Infrastructure", "zh": "基础设施" },
+      "keywords": ["PostgreSQL", "Kafka", "Kubernetes", "Terraform"]
+    },
+    {
+      "name": { "en": "Practices", "zh": "工程实践" },
+      "keywords": ["Observability", "Incident response", "Technical writing"]
+    }
+  ],
+  "work": [
+    {
+      "id": "work.northwind",
+      "position": { "en": "Senior Software Engineer", "zh": "高级软件工程师" },
+      "company": { "en": "Northwind Labs", "zh": "北风实验室" },
+      "location": { "en": "Singapore", "zh": "新加坡" },
+      "startDate": "2021.03",
+      "endDate": "",
+      "url": "https://northwind.example.com",
+      "highlights": [
+        {
+          "id": "work.northwind.b1",
+          "text": {
+            "en": "Rebuilt the order ingestion pipeline, cutting p99 latency from 1.8s to 240ms at 40k events/min.",
+            "zh": "重构订单接入管道，将 p99 延迟从 1.8 秒降至 240 毫秒，峰值 4 万事件/分钟。"
+          }
+        },
+        {
+          "id": "work.northwind.b2",
+          "text": {
+            "en": "Led a four-engineer team through a zero-downtime migration of the billing datastore.",
+            "zh": "带领四人团队完成计费数据存储的零停机迁移。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "work.halcyon",
+      "position": { "en": "Software Engineer", "zh": "软件工程师" },
+      "company": { "en": "Halcyon Systems", "zh": "哈尔西系统公司" },
+      "location": { "en": "Remote", "zh": "远程" },
+      "startDate": "2017.06",
+      "endDate": "2021.02",
+      "highlights": [
+        {
+          "id": "work.halcyon.b1",
+          "text": {
+            "en": "Owned the search relevance service; improved top-3 precision by 11 points against the shipped baseline.",
+            "zh": "负责搜索相关性服务，将前三条结果的准确率相对上线基线提升 11 个百分点。"
+          }
+        },
+        {
+          "id": "work.halcyon.b2",
+          "text": {
+            "en": "Mentored two junior engineers through their first production launch.",
+            "zh": "指导两名初级工程师完成他们的首次生产上线。"
+          }
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project.echo",
+      "name": { "en": "Project Echo", "zh": "回声计划" },
+      "url": "https://echo.example.com",
+      "stack": ["Go", "PostgreSQL"],
+      "highlights": [
+        {
+          "id": "project.echo.b1",
+          "text": {
+            "en": "Open-source audit-log store with deterministic replay; 1.2k stars and 40 contributing authors.",
+            "zh": "开源审计日志存储，支持确定性重放；1.2k star，40 位贡献者。"
+          }
+        },
+        {
+          "id": "project.echo.b2",
+          "text": {
+            "en": "Designed the append-only segment format that keeps writes O(1) regardless of retention window.",
+            "zh": "设计仅追加的分段格式，使写入复杂度与保留窗口无关，恒为 O(1)。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "project.tide",
+      "name": { "en": "Tide Charts", "zh": "潮汐图表" },
+      "stack": ["Python", "TypeScript"],
+      "highlights": [
+        {
+          "id": "project.tide.b1",
+          "text": {
+            "en": "Side project that renders reproducible charts from a declarative spec; used in two internal talks.",
+            "zh": "业余项目，从声明式规范生成可复现图表；已在两次内部演讲中使用。"
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu.example-tech",
+      "institution": { "en": "Example Institute of Technology", "zh": "示例理工学院" },
+      "institutionCn": "示例理工学院",
+      "startDate": "2013.08",
+      "endDate": "2017.05",
+      "summary": {
+        "en": "B.Sc. Computer Science. Coursework in distributed systems and information retrieval.",
+        "zh": "计算机科学理学学士，主修分布式系统与信息检索。"
+      }
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub.example-2020",
+      "name": {
+        "en": "Lightweight Retrieval Calibration for Small Language Models",
+        "zh": "面向小型语言模型的轻量检索校准方法"
+      },
+      "releaseDate": "2020.07",
+      "summary": {
+        "en": "A workshop paper on calibrating retrieval depth without retraining the underlying model.",
+        "zh": "一篇工作区论文，讨论在不重训底层模型的情况下校准检索深度。"
+      },
+      "links": [
+        {
+          "text": { "en": "DOI", "zh": "DOI" },
+          "href": "https://doi.org/10.0000/example.2020.0001"
+        }
+      ]
+    }
+  ]
+}

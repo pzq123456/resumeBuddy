@@ -1,0 +1,12 @@
+[project]
+name = "resume-buddy"
+version = "1.0.0"
+description = "Local-first AI resume skill: base resume, complete snapshots, targeted editing with diff-and-confirm, and deterministic PDF rendering."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "markupsafe>=3.0.4",
+    "pillow>=13.0.0",
+    "pymupdf>=2.1",
+]

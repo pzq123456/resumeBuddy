@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Rendered output (HTML / PDF / preview PNG)
+output/
+
+# Personal resume data - never enters version control
+data/
+tmp
+
+# Local test sandbox - all simulated user data lives here, never tracked
+.tmp/
+
+# Local skill install (copy of skills/resume-buddy for harness discovery)
+.opencode/
