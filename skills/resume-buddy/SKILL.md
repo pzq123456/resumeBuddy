@@ -13,7 +13,8 @@ license: MIT
 compatibility: >-
   Requires Python 3.13+ and uv (bundled scripts are PEP 723 self-contained).
   PDF output requires a Chromium/Edge browser; zh rendering requires a system
-  CJK font. Fully offline: no network access is needed or performed.
+  CJK font. The scripts perform no network access; `uv` may fetch declared
+  dependencies on first run, after which rendering works offline.
 metadata:
   version: "1.0.0"
 ---
@@ -81,6 +82,12 @@ data/                            # gitignored; never commit
   school, GPA, publication or date into a tracked file; never transmit
   personal data. This skill has no network step. The root is fixed at
   `data/` — do not reintroduce a second data root such as `~/.resume-buddy`.
+- **Installed skill vs. data root.** Copying this skill into
+  `~/.claude/skills/` or `~/.config/opencode/skills/` only makes it
+  discoverable; it does not move the data root. Keep one clone as the
+  project home and read/write `data/` there. Pass absolute paths to the
+  scripts, or run them from that clone. Never create `data/` inside the
+  global skill directory.
 
 ---
 

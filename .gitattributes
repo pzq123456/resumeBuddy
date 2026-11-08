@@ -1,0 +1,4 @@
+# Keep Git hooks runnable on Windows. Git for Windows' sh rejects CRLF
+# line endings in scripts, and core.autocrlf may otherwise add them on clone.
+.githooks/* text eol=lf
+*.sh text eol=lf
