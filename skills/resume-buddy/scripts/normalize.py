@@ -266,6 +266,7 @@ def normalize_resume(raw: dict) -> dict:
         "role": str(basics.get("label", "") or ""),
         "role_nodes": parse_inline(str(basics.get("label", "") or "")),
         "accent": str((raw.get("meta", {}) or {}).get("accent", "#B14E2E")),
+        "section_titles": (raw.get("meta", {}) or {}).get("section_titles", {}) or {},
         "contact": contact,
         "sections": sections,
         "counts": {

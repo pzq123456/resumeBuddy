@@ -11,6 +11,7 @@ wheels/
 
 # Rendered output (HTML / PDF / preview PNG)
 output/
+out/
 
 # Personal resume data - never enters version control
 data/

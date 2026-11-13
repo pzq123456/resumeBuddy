@@ -53,6 +53,9 @@ Exit codes: **`0`** pass · **`1`** QA errors · **`2`** schema or render error.
 - **Snapshot**: a complete resume file. Tailoring edits a snapshot with
   `edit.py`; it does not inherit from another file at render time.
 - **`meta.accent`**: optional hex color; `--accent` overrides it.
+- **`meta.section_titles`**: optional per-section heading overrides, e.g.
+  `{"work": {"en": "Relevant Experience", "zh": "相关经历"}}`. Missing
+  languages fall back to the built-in heading.
 
 ## Output
 

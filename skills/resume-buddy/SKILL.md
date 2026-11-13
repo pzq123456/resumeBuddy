@@ -32,6 +32,11 @@ metadata:
 Every rule below exists to make that sentence mechanically true where the
 code can enforce it, and explicit where only the conversation can.
 
+For content strategy, technical writing rules, and independent hiring review,
+use the companion `resume-writing` skill
+(`skills/resume-writing/SKILL.md`). This skill owns data integrity, snapshots,
+rendering, and QA; that skill owns editorial judgment.
+
 ---
 
 ## 1. Two workflows

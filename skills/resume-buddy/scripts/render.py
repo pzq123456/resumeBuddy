@@ -188,13 +188,22 @@ def render_html(model: dict, accent: dict, template_text: str,
     tpl = env.from_string(template_text)
     name_html, role_html, contact_html = render_header(model)
     parts = []
+    overrides = model.get("section_titles", {}) or {}
     for key in SECTION_KEYS:
         sec = model["sections"].get(key)
         if not sec:
             continue
-        title = (SECTION_TITLES.get(key, {}).get(lang)
-                 or SECTION_TITLES.get(key, {}).get("en")
-                 or key)
+        override = overrides.get(key, {}) if isinstance(overrides, dict) else {}
+        if isinstance(override, str):
+            # Localization collapses a {"en", "zh"} leaf to the chosen
+            # language before normalization, so accept a plain string too.
+            title = override
+        else:
+            title = (override.get(lang)
+                     or override.get("en")
+                     or SECTION_TITLES.get(key, {}).get(lang)
+                     or SECTION_TITLES.get(key, {}).get("en")
+                     or key)
         parts.append(render_section(sec, title, ""))
     return tpl.render(
         title=f"{model['name']} — {model['role']}",
